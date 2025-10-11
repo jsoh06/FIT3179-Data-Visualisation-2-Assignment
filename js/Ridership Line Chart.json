@@ -1,7 +1,7 @@
 {
     "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
     "data": {
-      "url": "https://raw.githubusercontent.com/jsoh06/FIT3179-Data-Visualisation-2/refs/heads/main/Week%2010%20Homework/data/ridership_headline.csv"
+      "url": "https://raw.githubusercontent.com/jsoh06/FIT3179-Data-Visualisation-2-Assignment/refs/heads/main/data/ridership_headline.csv"
     },
     "width": 750,
     "height": 400,
