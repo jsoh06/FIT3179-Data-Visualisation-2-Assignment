@@ -1,8 +1,33 @@
-#symbol_map {
-	top:100px;
-	bottom: 100px; 
-	left: 100px;
-	right: 100px;
-	/*height: 1000px;
-	width: 800px;*/
+body *{
+    font-family: 'Open Sans', sans-serif;
+}
+
+h1 {
+    font-weight: 900;
+    margin-bottom: 10px; /* Reduce space after title */
+}
+
+body {
+    background-color: lightgray;
+}
+
+.page {
+    width: 850px;
+    background-color: white;
+    margin: auto;
+    padding: 50px;
+    padding-top: 35px;
+}
+
+.vis-container {
+    width: 100%;
+}
+
+.pure-g {
+    margin-bottom: 20px;
+}
+
+/* Add this to reduce space between title and visualizations */
+.pure-g:first-of-type {
+    margin-bottom: 10px;
 }
