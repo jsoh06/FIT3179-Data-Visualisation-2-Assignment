@@ -43,14 +43,6 @@
       },
       {
         "data": {
-          "url": "https://raw.githubusercontent.com/jsoh06/FIT3179-Data-Visualisation-2-Assignment/refs/heads/main/datahotosm_mys_waterways_points_geojson.json",
-          "format": {"type": "json"}
-        },
-        "mark": {"type": "geoshape", "fill": "lightblue",
-        "stroke": "blue", "strokeWidth": 1, "fillOpacity": 0.6}
-      },
-      {
-        "data": {
           "url": "https://raw.githubusercontent.com/jsoh06/FIT3179-Data-Visualisation-2-Assignment/refs/heads/main/data/lrt-malaysia.csv"
         },
         "transform": [
