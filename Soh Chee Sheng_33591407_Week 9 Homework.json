@@ -1,0 +1,113 @@
+{
+    "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+    "width": "container",
+    "height": 450,
+    "title": "LRT stations in Malaysia (Klang Valley)",
+    "projection": {
+      "type": "conicEqualArea",
+      "center": [101.668543, 3.115596],
+      "scale": 80000
+    },
+    "params": [
+      {
+        "name": "line_selection",
+        "bind": {
+          "input": "select",
+          "options": [
+            null,
+            "LRT Kelana Jaya",
+            "LRT Ampang",
+            "Interchange"
+          ],
+          "labels": [
+            "Show All",
+            "LRT Kelana Jaya",
+            "LRT Ampang",
+            "Interchange"
+          ],
+          "name": "Select Train Line: "
+        }
+      }
+    ],
+    "layer": [
+      {
+        "data": {"sphere": true},
+        "mark": {"type": "geoshape", "fill": "lightblue"}
+      },
+      {
+        "data": {
+          "url": "https://raw.githubusercontent.com/jsoh06/FIT3179-Data-Visualisation-2/refs/heads/main/Week%209%20Homework/data/geoBoundaries-MYS-ADM2.topojson",
+          "format": {"type": "topojson", "feature": "MYSADM2gbOpen"}
+        },
+        "mark": {"type": "geoshape", "fill": "lightgray", "stroke": "white"}
+      },
+      {
+        "data": {
+          "url": "https://raw.githubusercontent.com/jsoh06/FIT3179-Data-Visualisation-2/refs/heads/main/Week%209%20Homework/data/lrt-malaysia.csv"
+        },
+        "transform": [
+          {"calculate": "toNumber(datum.latitude)", "as": "latitude_num"},
+          {"calculate": "toNumber(datum.longitude)", "as": "longitude_num"},
+          {"filter": "datum.latitude_num != null && datum.longitude_num != null"},
+          {"filter": "line_selection == null || line_selection == datum.train_line"}
+        ],
+        "mark": {
+          "type": "circle",
+          "size": 150,
+          "strokeWidth": 3,
+          "fillOpacity": 0.7
+        },
+        "encoding": {
+          "longitude": {"field": "longitude_num", "type": "quantitative"},
+          "latitude": {"field": "latitude_num", "type": "quantitative"},
+          "stroke": {
+            "field": "train_line",
+            "type": "nominal",
+            "title": "Train Line",
+            "scale": {
+              "domain": ["LRT Kelana Jaya", "LRT Ampang", "Interchange"],
+              "range": ["#00A651", "#FF8C00", "#DC143C"]
+            }
+          },
+          "tooltip": [
+            {"field": "station_name", "title": "Station Name"},
+            {"field": "city", "title": "City"},
+            {"field": "train_line", "title": "Train Line"},
+            {"field": "latitude_num", "title": "Latitude", "format": ".4f"},
+            {"field": "longitude_num", "title": "Longitude", "format": ".4f"}
+          ]
+        }
+      },
+      {
+        "data": {
+          "values": [
+            {"name": "Kuala Lumpur", "lon": 101.69, "lat": 3.14},
+            {"name": "Petaling Jaya", "lon": 101.652, "lat": 3.105},
+            {"name": "Subang Jaya", "lon": 101.586, "lat": 3.045},
+            {"name": "Shah Alam", "lon": 101.532, "lat": 3.073},
+            {"name": "Puchong", "lon": 101.62, "lat": 3.02},
+            {"name": "Putrajaya", "lon": 101.675, "lat": 2.926},
+            {"name": "Ampang", "lon": 101.76260854869975, "lat": 3.1313849204380833},
+            {"name": "Kajang", "lon": 101.78761509071454, "lat": 2.9932924844552766},
+            {"name": "Seri Kembangan", "lon": 101.70610916263688, "lat": 3.0223370819088067},
+            {"name": "Cheras", "lon": 101.76310074193907, "lat": 3.0494215140400276},
+            {"name": "Batu Caves", "lon": 101.68070327800439, "lat": 3.2365936813882605},
+            {"name": "Sungai Buloh", "lon": 101.56191360066367, "lat": 3.2098568705429242},
+            {"name": "Elmina", "lon": 101.50389205306087, "lat": 3.210542438560932},
+            {"name": "Hulu Langat", "lon": 101.81562912538848, "lat": 3.113530036265294}
+          ]
+        },
+        "mark": {
+          "type": "text",
+          "fontSize": 12,
+          "fontStyle": "italic",
+          "fontWeight": "bold"
+        },
+        "encoding": {
+          "text": {"field": "name", "type": "nominal"},
+          "longitude": {"field": "lon", "type": "quantitative"},
+          "latitude": {"field": "lat", "type": "quantitative"}
+        }
+      }
+    ]
+}
