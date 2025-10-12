@@ -36,6 +36,7 @@ body {
 
 .vis-container {
     width: 100%;
+    margin: 0;
 }
 
 .pure-g {
@@ -45,4 +46,13 @@ body {
 /* Add this to reduce space between title and visualizations */
 .pure-g:first-of-type {
     margin-bottom: 10px;
+}
+
+/* Add spacing between text and visualization columns */
+.pure-u-1-2:first-child {
+    padding-right: 20px;
+}
+
+.pure-u-1-2:last-child {
+    padding-left: 10px;
 }

@@ -95,7 +95,7 @@
         "format": ",.0f"
       }
     },
-    "row": {
+    "column": {
       "field": "day",
       "type": "nominal",
       "title": "Day Type"
