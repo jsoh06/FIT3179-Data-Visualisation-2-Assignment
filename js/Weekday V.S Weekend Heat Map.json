@@ -4,7 +4,7 @@
     "text": "Monthly Ridership by Train Line",
     "align": "center"
   },
-  "width": 300,
+  "width": "container",
   "height": 300,
   "data": {
     "url": "https://raw.githubusercontent.com/jsoh06/FIT3179-Data-Visualisation-2-Assignment/refs/heads/main/data/ridership_headline.csv"
@@ -95,7 +95,7 @@
         "format": ",.0f"
       }
     },
-    "column": {
+    "row": {
       "field": "day",
       "type": "nominal",
       "title": "Day Type"
