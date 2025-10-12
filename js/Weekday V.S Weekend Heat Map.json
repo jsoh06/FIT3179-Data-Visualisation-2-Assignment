@@ -1,7 +1,7 @@
 {
   "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
   "title": {
-    "text": "Monthly Ridership by Train Line",
+    "text": "Average Daily Ridership by Train Line",
     "align": "center"
   },
   "width": "container",
@@ -104,7 +104,6 @@
     "color": {
       "field": "avg_ridership",
       "type": "quantitative",
-      "title": "Average Daily Ridership",
       "scale": {
         "scheme": "blues"
       },
