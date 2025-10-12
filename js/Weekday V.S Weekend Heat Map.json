@@ -18,6 +18,20 @@
         "name": "Select Year: "
       },
       "value": "All"
+    },
+    {
+      "name": "train_line_filter",
+      "bind": {
+        "input": "select",
+        "options": [
+          "LRT Kelana Jaya",
+          "LRT Ampang", 
+          "MRT Kajang",
+          "Monorail"
+        ],
+        "name": "Select Train Line: "
+      },
+      "value": "LRT Kelana Jaya"
     }
   ],
   "transform": [
@@ -54,6 +68,9 @@
       "filter": "year_filter == 'All' || datum.year == parseFloat(year_filter)"
     },
     {
+      "filter": "datum.train_line_name == train_line_filter"
+    },
+    {
       "aggregate": [
         {
           "op": "mean",
@@ -61,7 +78,7 @@
           "as": "avg_ridership"
         }
       ],
-      "groupby": ["train_line_name", "day", "month", "month_name"]
+      "groupby": ["day", "month", "month_name"]
     }
   ],
   "mark": {
@@ -80,9 +97,9 @@
       }
     },
     "y": {
-      "field": "train_line_name",
+      "field": "day",
       "type": "nominal",
-      "title": "Train Line"
+      "title": "Day Type"
     },
     "color": {
       "field": "avg_ridership",
@@ -95,17 +112,7 @@
         "format": ",.0f"
       }
     },
-    "column": {
-      "field": "day",
-      "type": "nominal",
-      "title": "Day Type"
-    },
     "tooltip": [
-      {
-        "field": "train_line_name",
-        "type": "nominal",
-        "title": "Train Line"
-      },
       {
         "field": "day",
         "type": "nominal",
