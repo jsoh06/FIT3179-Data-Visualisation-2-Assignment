@@ -34,6 +34,10 @@
       "as": "month"
     },
     {
+        "calculate": "datum.month == 1 ? 'January' : datum.month == 2 ? 'February' : datum.month == 3 ? 'March' : datum.month == 4 ? 'April' : datum.month == 5 ? 'May' : datum.month == 6 ? 'June' : datum.month == 7 ? 'July' : datum.month == 8 ? 'August' : datum.month == 9 ? 'September' : datum.month == 10 ? 'October' : datum.month == 11 ? 'November' : 'December'",
+        "as": "month_name"
+      },
+    {
       "fold": [
         "rail_lrt_ampang", 
         "rail_mrt_kajang", 
@@ -57,7 +61,7 @@
           "as": "avg_ridership"
         }
       ],
-      "groupby": ["train_line_name", "day", "month"]
+      "groupby": ["train_line_name", "day", "month", "month_name"]
     }
   ],
   "mark": {
@@ -108,7 +112,7 @@
         "title": "Day Type"
       },
       {
-        "field": "month",
+        "field": "month_name",
         "type": "ordinal",
         "title": "Month"
       },
