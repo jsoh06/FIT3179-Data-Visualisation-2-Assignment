@@ -2,7 +2,6 @@
   "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
   "title": {
     "text": "Monthly Ridership by Train Line",
-    "anchor": "start",
     "align": "center"
   },
   "width": 300,
@@ -71,6 +70,7 @@
       "field": "month",
       "type": "ordinal",
       "title": "Month",
+      "sort": [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12],
       "axis": {
         "labelExpr": "datum.value == 1 ? 'Jan' : datum.value == 2 ? 'Feb' : datum.value == 3 ? 'Mar' : datum.value == 4 ? 'Apr' : datum.value == 5 ? 'May' : datum.value == 6 ? 'Jun' : datum.value == 7 ? 'Jul' : datum.value == 8 ? 'Aug' : datum.value == 9 ? 'Sep' : datum.value == 10 ? 'Oct' : datum.value == 11 ? 'Nov' : 'Dec'"
       }
