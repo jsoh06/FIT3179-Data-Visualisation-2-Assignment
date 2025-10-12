@@ -12,6 +12,10 @@ h1 {
     margin-bottom: 10px; /* Reduce space after title */
 }
 
+h2 {
+    margin-top: 10px; /* Reduce space before subtitle */
+}
+
 body {
     background-color: lightgray;
 }
