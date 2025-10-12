@@ -13,7 +13,13 @@ h1 {
 }
 
 h2 {
-    margin-top: 5px; /* Reduce space before subtitle */
+    margin-top: 0px; /* Reduce space above h2 */
+    margin-bottom: 5px; /* Small space between h2 and italic */
+}
+
+i {
+    display: block;
+    margin-bottom: 25px; /* Increase space after italic text */
 }
 
 body {
