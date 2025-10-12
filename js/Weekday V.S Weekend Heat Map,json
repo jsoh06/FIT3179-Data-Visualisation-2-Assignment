@@ -1,0 +1,132 @@
+{
+  "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+  "title": "Monthly Ridership by Train Line",
+  "width": "container",
+  "height": 300,
+  "data": {
+    "url": "https://raw.githubusercontent.com/jsoh06/FIT3179-Data-Visualisation-2-Assignment/refs/heads/main/data/ridership_headline.csv"
+  },
+  "params": [
+    {
+      "name": "year_filter",
+      "bind": {
+        "input": "select",
+        "options": ["All", "2021", "2022", "2023", "2024"],
+        "name": "Select Year: "
+      },
+      "value": "All"
+    }
+  ],
+  "transform": [
+    {
+      "calculate": "timeParse(datum.date, '%d/%m/%Y')",
+      "as": "parsed_date"
+    },
+    {
+      "calculate": "year(datum.parsed_date)",
+      "as": "year"
+    },
+    {
+      "calculate": "month(datum.parsed_date)",
+      "as": "month"
+    },
+    {
+      "fold": [
+        "lrt_kj_weekday", "lrt_kj_weekend",
+        "lrt_ampang_weekday", "lrt_ampang_weekend",
+        "mrt_kajang_weekday", "mrt_kajang_weekend",
+        "monorail_weekday", "monorail_weekend"
+      ],
+      "as": ["category", "ridership"]
+    },
+    {
+      "calculate": "split(datum.category, '_')[0] + '_' + split(datum.category, '_')[1]",
+      "as": "train_line"
+    },
+    {
+      "calculate": "split(datum.category, '_')[2]",
+      "as": "day_type"
+    },
+    {
+      "calculate": "datum.train_line == 'lrt_kj' ? 'LRT Kelana Jaya' : datum.train_line == 'lrt_ampang' ? 'LRT Ampang' : datum.train_line == 'mrt_kajang' ? 'MRT Kajang' : datum.train_line == 'monorail' ? 'Monorail' : datum.train_line",
+      "as": "train_line_name"
+    },
+    {
+      "calculate": "datum.day_type == 'weekday' ? 'Weekday' : 'Weekend'",
+      "as": "day_type_name"
+    },
+    {
+      "filter": "year_filter == 'All' || datum.year == parseFloat(year_filter)"
+    },
+    {
+      "aggregate": [
+        {
+          "op": "mean",
+          "field": "ridership",
+          "as": "avg_ridership"
+        }
+      ],
+      "groupby": ["train_line_name", "day_type_name", "month"]
+    }
+  ],
+  "mark": {
+    "type": "rect",
+    "stroke": "white",
+    "strokeWidth": 2
+  },
+  "encoding": {
+    "x": {
+      "field": "month",
+      "type": "ordinal",
+      "title": "Month",
+      "axis": {
+        "labelExpr": "datum.value == 1 ? 'Jan' : datum.value == 2 ? 'Feb' : datum.value == 3 ? 'Mar' : datum.value == 4 ? 'Apr' : datum.value == 5 ? 'May' : datum.value == 6 ? 'Jun' : datum.value == 7 ? 'Jul' : datum.value == 8 ? 'Aug' : datum.value == 9 ? 'Sep' : datum.value == 10 ? 'Oct' : datum.value == 11 ? 'Nov' : 'Dec'"
+      }
+    },
+    "y": {
+      "field": "train_line_name",
+      "type": "nominal",
+      "title": "Train Line"
+    },
+    "color": {
+      "field": "avg_ridership",
+      "type": "quantitative",
+      "title": "Average Daily Ridership",
+      "scale": {
+        "scheme": "blues",
+        "type": "linear"
+      },
+      "legend": {
+        "format": ".0f"
+      }
+    },
+    "row": {
+      "field": "day_type_name",
+      "type": "nominal",
+      "title": "Day Type"
+    },
+    "tooltip": [
+      {
+        "field": "train_line_name",
+        "type": "nominal",
+        "title": "Train Line"
+      },
+      {
+        "field": "day_type_name",
+        "type": "nominal",
+        "title": "Day Type"
+      },
+      {
+        "field": "month",
+        "type": "ordinal",
+        "title": "Month"
+      },
+      {
+        "field": "avg_ridership",
+        "type": "quantitative",
+        "title": "Average Daily Ridership",
+        "format": ",.0f"
+      }
+    ]
+  }
+}
