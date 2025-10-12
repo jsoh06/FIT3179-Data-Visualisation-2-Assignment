@@ -26,6 +26,7 @@ body {
 
 .vis-container {
     width: 100%;
+    margin-right: 20px; /* Add space to the right of charts */
 }
 
 .pure-g {
