@@ -7,10 +7,6 @@ p {
 	margin-bottom: 1.2em;
 }
 
-body *{
-    font-family: 'Open Sans', sans-serif;
-}
-
 h1 {
     font-weight: 900;
     margin-bottom: 10px; /* Reduce space after title */
