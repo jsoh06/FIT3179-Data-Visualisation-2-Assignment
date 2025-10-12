@@ -1,7 +1,11 @@
 {
   "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
-  "title": "Monthly Ridership by Train Line",
-  "width": "container",
+  "title": {
+    "text": "Monthly Ridership by Train Line",
+    "anchor": "start",
+    "align": "center"
+  },
+  "width": 300,
   "height": 300,
   "data": {
     "url": "https://raw.githubusercontent.com/jsoh06/FIT3179-Data-Visualisation-2-Assignment/refs/heads/main/data/ridership_headline.csv"
@@ -87,7 +91,7 @@
         "format": ",.0f"
       }
     },
-    "row": {
+    "column": {
       "field": "day",
       "type": "nominal",
       "title": "Day Type"
