@@ -4,7 +4,7 @@
       "url": "https://raw.githubusercontent.com/jsoh06/FIT3179-Data-Visualisation-2-Assignment/refs/heads/main/data/ridership_headline.csv"
     },
     "width": "container",
-    "height": 325,
+    "height": 300,
     "title": "Ridership of Train Lines in Malaysia (2021 - 2024)",
     "params": [
       {
@@ -133,7 +133,7 @@
             "type": "temporal"
           },
           "y": {
-            "datum": 80000
+            "datum": 120000
           },
           "text": {
             "value": "MCO Period"
@@ -170,7 +170,7 @@
             "type": "temporal"
           },
           "y": {
-            "datum": 75000
+            "datum": 65000
           },
           "text": {
             "value": "Endemic Phase"
