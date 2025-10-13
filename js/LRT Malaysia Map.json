@@ -67,6 +67,14 @@
             "scale": {
               "domain": ["LRT Kelana Jaya", "LRT Ampang", "Interchange"],
               "range": ["#00A651", "#FF8C00", "#DC143C"]
+            },
+            "legend": {
+              "orient": "none",
+              "legendX": 20,
+              "legendY": 20,
+              "direction": "vertical",
+              "titleAnchor": "start",
+              "offset": 0
             }
           },
           "tooltip": [
