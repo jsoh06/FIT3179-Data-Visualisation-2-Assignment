@@ -1,6 +1,6 @@
 {
     "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
-    "width": 750,
+    "width": 650,
     "height": 450,
     "title": "LRT stations in Malaysia (Klang Valley)",
     "projection": {
