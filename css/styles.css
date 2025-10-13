@@ -5,6 +5,7 @@
 
 p {
 	margin-bottom: 1.2em;
+    width: 80%;
 }
 
 h1 {
@@ -27,7 +28,7 @@ body {
 }
 
 .page {
-    width: 1250px;
+    width: 1000px;
     background-color: white;
     margin: auto;
     padding: 50px;
