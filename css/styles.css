@@ -3,6 +3,11 @@
     line-height: 1.6;
   }
 
+p {
+	margin-bottom: 1.2em;
+    width: 95%;
+}
+
 h1 {
     font-weight: 900;
     margin-bottom: 10px; /* Reduce space after title */
