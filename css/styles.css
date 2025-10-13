@@ -51,11 +51,11 @@ body {
 
 /* Add spacing between text and visualization columns */
 .pure-u-1-2:first-child {
-    padding-right: 15px;
+    padding-left: 30px;
 }
 
 .pure-u-1-2:last-child {
-    padding-left: 15px;
+    padding-left: 30px;
 }
 
 /* Force proper grid layout */
