@@ -51,7 +51,7 @@ body {
 
 /* Add spacing between text and visualization columns */
 .pure-u-1-2:first-child {
-    padding-left: 30px;
+    padding-left: 250px;
 }
 
 .pure-u-1-2:last-child {
