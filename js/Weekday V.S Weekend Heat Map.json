@@ -104,7 +104,7 @@
     "color": {
       "field": "avg_ridership",
       "type": "quantitative",
-      "title": "Average Daily Ridership",
+      "title": "Daily Average",
       "scale": {
         "scheme": "blues"
       },
