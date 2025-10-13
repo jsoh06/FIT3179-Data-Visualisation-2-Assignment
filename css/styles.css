@@ -48,13 +48,6 @@ body {
     margin-bottom: 10px;
 }
 
-/* Force proper grid layout */
-.pure-u-1-2 {
-    display: inline-block;
-    vertical-align: top;
-    box-sizing: border-box;
-}
-
 .map .pure-u-1-2:last-child {
     padding-left: 200px;
 }
