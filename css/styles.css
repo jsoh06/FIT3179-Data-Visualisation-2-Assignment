@@ -56,9 +56,14 @@ body {
 }
 
 .metadata-section {
-    font-size: 10px;
     margin-top: 10px;
     margin-bottom: 10px;
+}
+
+.metadata {
+    font-size: 10px;
+    margin-bottom: 0px;
+    margin-top: 0px;
 }
 
 .map .pure-u-1-2:last-child {
