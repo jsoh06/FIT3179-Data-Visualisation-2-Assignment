@@ -55,8 +55,9 @@ body {
     box-sizing: border-box;
 }
 
-.small-font {
+.metadata {
     font-size: 10px;
+    margin-bottom: 10px;
   }
 
 .map .pure-u-1-2:last-child {
