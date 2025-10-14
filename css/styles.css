@@ -55,6 +55,10 @@ body {
     box-sizing: border-box;
 }
 
+.small-font {
+    font-size: 20px;
+  }
+
 .map .pure-u-1-2:last-child {
     padding-left: 200px;
 }
