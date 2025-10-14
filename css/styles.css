@@ -55,15 +55,10 @@ body {
     box-sizing: border-box;
 }
 
-.metadata-section {
-    margin-top: 1px;
-    margin-bottom: 1px;
-}
-
-.metadata {
-    font-size: 10px;
-    margin-bottom: 0px;
-    margin-top: 0px;
+.metadata p {
+    margin-bottom: 0.3em;
+    margin-top: 0.3em;
+    line-height: 1.2;
 }
 
 .map .pure-u-1-2:last-child {
