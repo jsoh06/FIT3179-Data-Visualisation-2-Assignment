@@ -5,39 +5,42 @@
     "height": 300,
     "data": {
         "values": [
-            {"origin": "Gombak", "destination": "KLCC", "time": 22, "fare": 3.1},
-            {"origin": "Gombak", "destination": "KL Sentral (KJL)", "time": 32, "fare": 3.6},
-            {"origin": "Gombak", "destination": "Kajang", "time": 71, "fare": 6.8},
-            {"origin": "KLCC", "destination": "Kajang", "time": 49, "fare": 5.4},
-            {"origin": "KL Sentral (KJL)", "destination": "Kajang", "time": 45, "fare": 3.6},
-            {"origin": "Bangsar", "destination": "KLCC", "time": 12, "fare": 2.4},
-            {"origin": "Subang Jaya", "destination": "KLCC", "time": 41, "fare": 3.7},
-            {"origin": "USJ 7 (KJL)", "destination": "KLCC", "time": 50, "fare": 3.4},
-            {"origin": "Putra Heights (KJL)", "destination": "KLCC", "time": 66, "fare": 4.1}
-          ]
+            {"origin": "Gombak", "destination": "KLCC", "time": 22, "fare": 3.1, "line": "LRT Kelana Jaya"},
+            {"origin": "Gombak", "destination": "KL Sentral (KJL)", "time": 32, "fare": 3.6, "line": "LRT Kelana Jaya"},
+            {"origin": "Gombak", "destination": "Kajang", "time": 71, "fare": 6.8, "line": "Multi-line"},
+            {"origin": "KLCC", "destination": "Kajang", "time": 49, "fare": 5.4, "line": "Multi-line"},
+            {"origin": "KL Sentral (KJL)", "destination": "Kajang", "time": 45, "fare": 3.6, "line": "Multi-line"},
+            {"origin": "Bangsar", "destination": "KLCC", "time": 12, "fare": 2.4, "line": "LRT Kelana Jaya"},
+            {"origin": "Subang Jaya", "destination": "KLCC", "time": 41, "fare": 3.7, "line": "LRT Kelana Jaya"},
+            {"origin": "USJ 7 (KJL)", "destination": "KLCC", "time": 50, "fare": 3.4, "line": "LRT Kelana Jaya"},
+            {"origin": "Putra Heights (KJL)", "destination": "KLCC", "time": 66, "fare": 4.1, "line": "LRT Kelana Jaya"},
+            {"origin": "Pasar Seni (SBK)", "destination": "Kajang", "time": 42, "fare": 3.2, "line": "MRT Kajang"},
+            {"origin": "Bukit Bintang", "destination": "Kajang", "time": 38, "fare": 3.8, "line": "MRT Kajang"},
+            {"origin": "TRX", "destination": "Kajang", "time": 36, "fare": 3.6, "line": "MRT Kajang"},
+            {"origin": "Maluri (SBK)", "destination": "Kajang", "time": 33, "fare": 3.3, "line": "MRT Kajang"},
+            {"origin": "Sungai Buloh", "destination": "Kajang", "time": 81, "fare": 6.4, "line": "MRT Kajang"}
+        ]
     },
     "params": [
         {
-            "name": "origin_station",
+            "name": "train_line_filter",
             "bind": {
                 "input": "select",
-                "options": ["All", "Gombak", "KLCC", "KL Sentral (KJL)", 
-                "Kajang", "Bangsar", "Subang Jaya", "USJ 7 (KJL)", 
-                "Putra Heights (KJL)"],
-                "name": "Select Origin Station: "
+                "options": ["All", "LRT Kelana Jaya", "MRT Kajang", "Multi-line"],
+                "name": "Select Train Line: "
             },
             "value": "All"
         }
     ],
     "transform": [
         {
-            "filter": "origin_station == 'All' || datum.origin == origin_station"
+            "filter": "train_line_filter == 'All' || datum.line == train_line_filter"
         }
     ],
     "mark": {
         "type": "circle",
-        "size": 100,
-        "opacity": 0.7
+        "size": 120,
+        "opacity": 0.8
     },
     "encoding": {
         "x": {
@@ -53,13 +56,18 @@
             "scale": {"zero": false}
         },
         "color": {
-            "field": "origin",
+            "field": "line",
             "type": "nominal",
-            "title": "Origin Station"
+            "title": "Train Line",
+            "scale": {
+                "domain": ["LRT Kelana Jaya", "MRT Kajang", "Multi-line"],
+                "range": ["#00A651", "#FF6B35", "#7B68EE"]
+            }
         },
         "tooltip": [
             {"field": "origin", "type": "nominal", "title": "Origin Station"},
             {"field": "destination", "type": "nominal", "title": "Destination Station"},
+            {"field": "line", "type": "nominal", "title": "Train Line"},
             {"field": "time", "type": "quantitative", "title": "Travel Time (minutes)"},
             {"field": "fare", "type": "quantitative", "title": "Fare (MYR)", "format": ".1f"}
         ]
