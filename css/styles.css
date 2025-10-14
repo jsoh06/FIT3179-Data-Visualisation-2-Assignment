@@ -56,9 +56,20 @@ body {
 }
 
 .metadata p {
+    font-size: 10px;
     margin-bottom: 0.3em;
     margin-top: 0.3em;
     line-height: 1.2;
+}
+
+/* Also target the first p element specifically */
+.metadata p:first-of-type {
+    margin-top: 0px !important;
+}
+
+/* And the last p element */
+.metadata p:last-of-type {
+    margin-bottom: 0px !important;
 }
 
 .map .pure-u-1-2:last-child {
