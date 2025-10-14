@@ -47,6 +47,12 @@ body {
     margin-bottom: 10px;
 }
 
+/* Add this to target the last pure-g container (metadata section) */
+.pure-g:last-child {
+    margin-bottom: 5px !important;
+}
+
+
 /* Force proper grid layout */
 .pure-u-1-2 {
     display: inline-block;
