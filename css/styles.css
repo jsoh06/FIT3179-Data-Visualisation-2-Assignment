@@ -49,7 +49,7 @@ body {
 
 /* Add this to target the last pure-g container (metadata section) */
 .pure-g:last-child {
-    margin-bottom: 5px !important;
+    margin-bottom: 0px;
 }
 
 
