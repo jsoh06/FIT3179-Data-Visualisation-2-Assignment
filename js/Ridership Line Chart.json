@@ -91,7 +91,7 @@
                 "#FFD23F",
                 "#7B68EE",
                 "pink",
-                "orange",
+                "black",
                 "gray"
               ]
             },
@@ -226,7 +226,7 @@
           "dx": -5,
           "dy": 15,
           "fontSize": 10,
-          "color": "orange"
+          "color": "black"
         },
         "encoding": {
           "x": {
