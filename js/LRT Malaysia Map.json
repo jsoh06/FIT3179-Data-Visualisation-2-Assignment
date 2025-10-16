@@ -66,7 +66,7 @@
             "title": "Train Line",
             "scale": {
               "domain": ["LRT Kelana Jaya", "LRT Ampang", "Interchange"],
-              "range": ["purple", "orange", "blue"]
+              "range": ["purple", "orange", "lightseagreen"]
             },
             "legend": {
               "orient": "none",
