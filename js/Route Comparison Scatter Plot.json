@@ -98,7 +98,7 @@
             "title": "Train Line",
             "scale": {
                 "domain": ["LRT Kelana Jaya", "MRT Kajang", "Multi-line"],
-                "range": ["purple", "#7B68EE;", "lightseagreen"]
+                "range": ["purple", "#7B68EE", "lightseagreen"]
             }
         },
         "tooltip": [
