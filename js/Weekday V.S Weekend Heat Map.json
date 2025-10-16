@@ -106,7 +106,7 @@
       "type": "quantitative",
       "title": "Daily Average",
       "scale": {
-        "scheme": "blues"
+        "scheme": "oranges"
       },
       "legend": {
         "format": ",.0f"
