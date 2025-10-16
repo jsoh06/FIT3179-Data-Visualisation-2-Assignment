@@ -63,7 +63,7 @@ body {
 /* Left border accents for visual hierarchy */
 .pure-g:not(:first-child):not(:last-child) {
     border-left: 4px solid #e0e0e0;
-    padding-left: 20px;
+    padding-left: 10px;
 }
 
 .pure-g.map {
