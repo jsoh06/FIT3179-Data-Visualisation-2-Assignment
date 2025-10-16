@@ -1,6 +1,5 @@
 {
     "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
-    "title": "Time vs Cost",
     "width": "container",
     "height": 300,
     "data": {

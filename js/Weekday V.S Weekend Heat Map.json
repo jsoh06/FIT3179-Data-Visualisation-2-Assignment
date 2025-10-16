@@ -1,9 +1,5 @@
 {
   "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
-  "title": {
-    "text": "Monthly Ridership by Train Line",
-    "align": "center"
-  },
   "width": "container",
   "height": 300,
   "data": {
