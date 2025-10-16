@@ -75,6 +75,26 @@
             "field": "rail_line_name",
             "type": "nominal",
             "title": "Train Line",
+            "scale": {
+              "domain": [
+                "LRT Ampang Line",
+                "LRT Kelana Jaya Line", 
+                "Monorail Line",
+                "MRT Kajang Line",
+                "KTMB ETS",
+                "KTM Intercity",
+                "KTM Komuter"
+              ],
+              "range": [
+                "#FF6B35",
+                "purple", 
+                "#FFD23F",
+                "#7B68EE",
+                "#FF1744",
+                "orange",
+                "#8BC34A"
+              ]
+            },
             "legend": {
               "orient": "none", 
               "legendX": 10, 
@@ -184,7 +204,7 @@
           "dx": -5,
           "dy": 0,
           "fontSize": 10,
-          "color": "green"
+          "color": "purple"
         },
         "encoding": {
           "x": {
@@ -206,7 +226,7 @@
           "dx": -5,
           "dy": 15,
           "fontSize": 10,
-          "color": "#1f77b4"
+          "color": "orange"
         },
         "encoding": {
           "x": {
