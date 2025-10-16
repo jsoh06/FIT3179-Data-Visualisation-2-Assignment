@@ -106,7 +106,7 @@
       {
         "mark": {
           "type": "rule",
-          "color": "red",
+          "color": "purple",
           "strokeDash": [4, 4],
           "size": 2
         },
@@ -125,7 +125,7 @@
           "dy": -5,
           "fontSize": 11,
           "fontWeight": "bold",
-          "color": "red"
+          "color": "purple"
         },
         "encoding": {
           "x": {
