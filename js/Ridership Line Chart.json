@@ -86,13 +86,13 @@
                 "KTM Komuter"
               ],
               "range": [
-                "#FF6B35",
+                "orange",
                 "purple", 
                 "#FFD23F",
                 "#7B68EE",
-                "#FF1744",
+                "pink",
                 "orange",
-                "#8BC34A"
+                "gray"
               ]
             },
             "legend": {
