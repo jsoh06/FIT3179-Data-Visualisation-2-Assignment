@@ -40,6 +40,8 @@ body {
 
 .pure-g {
     margin-bottom: 20px;
+    padding: 25px 0;
+    border-bottom: 1px solid #e0e0e0;
 }
 
 /* Add this to reduce space between title and visualizations */
@@ -50,8 +52,29 @@ body {
 /* Add this to target the last pure-g container (metadata section) */
 .pure-g:last-child {
     margin-bottom: 0px;
+    border-bottom: none;
 }
 
+/* Subtle background variations */
+.pure-g:nth-child(even) {
+    background-color: #fafafa;
+}
+
+/* Left border accents for visual hierarchy */
+.pure-g:not(:first-child):not(:last-child) {
+    border-left: 4px solid #e0e0e0;
+    padding-left: 30px;
+}
+
+.pure-g.map {
+    border-left-color: #2196F3;
+    background-color: #f3f8ff;
+}
+
+.pure-g.heatmap {
+    border-left-color: #9C27B0;
+    background-color: #fdf4ff;
+}
 
 /* Force proper grid layout */
 .pure-u-1-2 {
