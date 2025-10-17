@@ -114,7 +114,7 @@
             "legend": {
                 "orient": "none",
                 "legendX": 450,
-                "legendY": 50,
+                "legendY": 0,
                 "direction": "vertical",
                 "titleAnchor": "start",
                 "offset": 0,
