@@ -110,7 +110,7 @@
               "field": "parsed_date",
               "type": "temporal",
               "timeUnit": "yearmonth",
-              "title": "Date"
+              "title": "Month"
             },
             {
               "field": "ridership",

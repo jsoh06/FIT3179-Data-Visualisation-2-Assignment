@@ -73,10 +73,22 @@
             {"origin": "Kajang", "destination": "Bukit Bintang", "time": 43, "fare": 3.8, "line": "MRT Kajang"}
         ]
     },
+    "params": [
+        {
+            "name": "line_selection",
+            "select": {
+                "type": "point",
+                "fields": ["line"]
+            },
+            "bind": "legend"
+        }
+    ],
     "mark": {
         "type": "circle",
         "size": 120,
-        "opacity": 0.8
+        "opacity": 0.8,
+        "stroke": "white",
+        "strokeWidth": 1
     },
     "encoding": {
         "x": {
@@ -99,6 +111,20 @@
                 "domain": ["LRT Kelana Jaya", "MRT Kajang", "Multi-line"],
                 "range": ["purple", "#7B68EE", "lightseagreen"]
             }
+        },
+        "opacity": {
+            "condition": {
+                "param": "line_selection",
+                "value": 0.8
+            },
+            "value": 0.1
+        },
+        "size": {
+            "condition": {
+                "param": "line_selection",
+                "value": 150
+            },
+            "value": 80
         },
         "tooltip": [
             {"field": "origin", "type": "nominal", "title": "Origin Station"},
