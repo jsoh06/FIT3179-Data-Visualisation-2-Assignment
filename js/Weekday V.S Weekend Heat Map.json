@@ -102,10 +102,15 @@
       "type": "quantitative",
       "title": "Daily Average",
       "scale": {
-        "scheme": "oranges"
+        "scheme": "oranges",
+        "type": "threshold",
+        "domain": [50000, 100000, 150000, 200000],
+        "range": ["#fee6ce", "#fdae6b", "#fd8d3c", "#e6550d", "#a63603"]
       },
       "legend": {
-        "format": ",.0f"
+        "format": ",.0f",
+        "labelExpr": "datum.value == 50000 ? 'Low (< 50K)' : datum.value == 100000 ? 'Medium (50K-100K)' : datum.value == 150000 ? 'High (100K-150K)' : datum.value == 200000 ? 'Very High (150K-200K)' : 'Peak (> 200K)'",
+        "title": "Ridership Classification"        
       }
     },
     "tooltip": [

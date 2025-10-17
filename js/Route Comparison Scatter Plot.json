@@ -110,8 +110,18 @@
             "scale": {
                 "domain": ["LRT Kelana Jaya", "MRT Kajang", "Multi-line"],
                 "range": ["purple", "#7B68EE", "lightseagreen"]
+            },
+            "legend": {
+                "orient": "none",
+                "legendX": 450,
+                "legendY": 50,
+                "direction": "vertical",
+                "titleAnchor": "start",
+                "offset": 0,
+                "padding": 10
             }
         },
+        
         "opacity": {
             "condition": {
                 "param": "line_selection",
