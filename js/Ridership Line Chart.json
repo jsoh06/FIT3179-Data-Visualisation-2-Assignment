@@ -12,10 +12,10 @@
           "input": "select",
           "options": [
             "All",
-            "LRT Ampang Line",
-            "LRT Kelana Jaya Line", 
-            "Monorail Line",
-            "MRT Kajang Line",
+            "LRT Ampang",
+            "LRT Kelana Jaya", 
+            "Monorail",
+            "MRT Kajang",
             "KTMB ETS",
             "KTM Intercity",
             "KTM Komuter"
@@ -43,7 +43,7 @@
         "as": "parsed_date"
       },
       {
-        "calculate": "datum.rail_type == 'rail_lrt_ampang' ? 'LRT Ampang Line' : datum.rail_type == 'rail_lrt_kj' ? 'LRT Kelana Jaya Line' : datum.rail_type == 'rail_monorail' ? 'Monorail Line' : datum.rail_type == 'rail_mrt_kajang' ? 'MRT Kajang Line' : datum.rail_type == 'rail_ets' ? 'KTMB ETS' : datum.rail_type == 'rail_intercity' ? 'KTM Intercity' : datum.rail_type == 'rail_komuter_utara' ? 'KTM Komuter' : datum.rail_type",
+        "calculate": "datum.rail_type == 'rail_lrt_ampang' ? 'LRT Ampang' : datum.rail_type == 'rail_lrt_kj' ? 'LRT Kelana Jaya' : datum.rail_type == 'rail_monorail' ? 'Monorail' : datum.rail_type == 'rail_mrt_kajang' ? 'MRT Kajang' : datum.rail_type == 'rail_ets' ? 'KTMB ETS' : datum.rail_type == 'rail_intercity' ? 'KTM Intercity' : datum.rail_type == 'rail_komuter_utara' ? 'KTM Komuter' : datum.rail_type",
         "as": "rail_line_name"
       },
       {
