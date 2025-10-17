@@ -36,7 +36,9 @@ body {
 }
 
 .vis-container {
-    width: 130%;
+    width: 100%;
+    max-width: 100%;
+    overflow: hidden;
 }
 
 .pure-g {
@@ -109,24 +111,24 @@ body {
     padding-right: 25px;
 }
 
-#vis2, #vis3, #vis4 {
-    width: 130%;
-    margin-left: -15%;
-    transform: scale(1.1);
-    transform-origin: left center;
-}
-
 /* Keep map (vis1) at normal size */
 #vis1 {
     width: 100%;
     margin-left: 0;
 }
 
-/* Adjust the grid layout for better chart display */
+/* Adjust text-to-chart ratio */
 .pure-g:not(.map):not(:first-child):not(:last-child) .pure-u-1-2:first-child {
-    width: 40%;
+    width: 32%;
+    padding-right: 15px;
 }
 
 .pure-g:not(.map):not(:first-child):not(:last-child) .pure-u-1-2:last-child {
-    width: 60%;
+    width: 68%;
+}
+
+/* Scale charts appropriately within their containers */
+#vis2, #vis3, #vis4 {
+    width: 100%;
+    height: auto;
 }
