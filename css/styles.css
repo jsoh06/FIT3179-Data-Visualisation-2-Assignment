@@ -5,6 +5,7 @@
 
 p {
     width: 95%;
+    margin-bottom: 0.8em; /* Add this to reduce paragraph spacing */
 }
 
 h1 {
@@ -15,12 +16,12 @@ h1 {
 
 h2 {
     margin-top: 0px; /* Reduce space above h2 */
-    margin-bottom: 10px; /* Small space between h2 and italic */
+    margin-bottom: 5px; /* Small space between h2 and italic */
 }
 
 i {
     display: block;
-    margin-bottom: 10px; /* Increase space after italic text */
+    margin-bottom: 5px; /* Increase space after italic text */
 }
 
 body {
@@ -42,31 +43,36 @@ body {
 }
 
 .pure-g {
-    margin-bottom: 20px;
-    padding: 25px 0;
+    margin-bottom: 15px;
+    padding: 15px 0;
     border-bottom: 1px solid #e0e0e0;
 }
 
 /* Add this to reduce space between title and visualizations */
 .pure-g:first-of-type {
-    margin-bottom: 10px;
-}
-
-/* Add this to target the last pure-g container (metadata section) */
-.pure-g:last-child {
-    margin-bottom: 0px;
-    border-bottom: none;
-}
-
-/* Subtle background variations */
-.pure-g:nth-child(even) {
-    background-color: #fafafa;
+    margin-bottom: 5px;
+    padding-bottom: 10px; /*padding for title*/
 }
 
 /* Left border accents for visual hierarchy */
 .pure-g:not(:first-child):not(:last-child) {
     border-left: 4px solid #e0e0e0;
     padding-left: 10px;
+    margin-bottom: 10px; /* Add this to reduce space between sections */
+    padding: 15px 0; /* Reduce vertical padding */
+}
+
+/* Metadata section - minimal spacing */
+.pure-g:last-child {
+    margin-bottom: 0px;
+    margin-top: 10px;
+    padding: 10px 0;
+    border-bottom: none;
+}
+
+/* Subtle background variations */
+.pure-g:nth-child(even) {
+    background-color: #fafafa;
 }
 
 .pure-g.map {
