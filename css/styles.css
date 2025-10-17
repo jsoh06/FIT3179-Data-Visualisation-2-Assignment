@@ -107,6 +107,16 @@ body {
     padding-left: 200px;
 }
 
+.pure-g.map .pure-u-1-2:first-child {
+    width: 50%;
+    padding-right: 0px
+}
+
+.pure-g.map .pure-u-1-2:last-child {
+    width: 50% !important;
+    padding-left: 200px; /* Keep your existing padding */
+}
+
 .heatmap .pure-u-1-2:first-child {
     padding-right: 25px;
 }
@@ -117,15 +127,36 @@ body {
     margin-left: 0;
 }
 
-/* Adjust text-to-chart ratio */
-.pure-g:not(.map):not(:first-child):not(:last-child) .pure-u-1-2:first-child {
+/* Heatmap section layout */
+.pure-g.heatmap .pure-u-1-2:first-child {
+    width: 32%;
+    padding-right: 25px;
+}
+
+.pure-g.heatmap .pure-u-1-2:last-child {
+    width: 68%;
+}
+
+/* Route comparison section (assuming it has class or specific targeting) */
+.pure-g:nth-child(5) .pure-u-1-2:first-child { /* Adjust number based on position */
     width: 32%;
     padding-right: 15px;
 }
 
-.pure-g:not(.map):not(:first-child):not(:last-child) .pure-u-1-2:last-child {
+.pure-g:nth-child(5) .pure-u-1-2:last-child {
     width: 68%;
 }
+
+/* Keep map section at 50/50 */
+.pure-g.map .pure-u-1-2:first-child {
+    width: 50%;
+}
+
+.pure-g.map .pure-u-1-2:last-child {
+    width: 50%;
+    padding-left: 200px;
+}
+
 
 /* Scale charts appropriately within their containers */
 #vis2, #vis3, #vis4 {
