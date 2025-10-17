@@ -2,8 +2,10 @@
     "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
     "width": "container",
     "height": 300,
-    "data": {
-        "values": [
+    "layer": [
+        {
+            "data": {
+            "values": [
             {"origin": "Gombak", "destination": "Bukit Bintang", "time": 34, "fare": 3.8, "line": "Multi-line"},
             {"origin": "Taman Melati", "destination": "KLCC", "time": 19, "fare": 2.8, "line": "LRT Kelana Jaya"},
             {"origin": "Wangsa Maju", "destination": "Bukit Bintang", "time": 27, "fare": 3.6, "line": "Multi-line"},        
@@ -113,8 +115,8 @@
             },
             "legend": {
                 "orient": "none",
-                "legendX": 450,
-                "legendY": 0,
+                "legendX": 480,
+                "legendY": 300,
                 "direction": "vertical",
                 "titleAnchor": "start",
                 "offset": 0,
@@ -144,4 +146,30 @@
             {"field": "fare", "type": "quantitative", "title": "Fare (MYR)", "format": ".1f"}
         ]
     }
+},
+{
+    "data": {
+        "values": [
+            {"x": 5, "y": 1.0, "text": "Short & Cheap"},
+            {"x": 75, "y": 6.0, "text": "Long & Expensive"},
+            {"x": 2, "y": 1.1, "text": "Most Efficient"}
+        ]
+    },
+    "mark": {
+        "type": "text",
+        "align": "center",
+        "baseline": "middle",
+        "fontSize": 11,
+        "fontStyle": "italic",
+        "fontWeight": "bold",
+        "color": "black",
+        "opacity": 0.7
+    },
+    "encoding": {
+        "x": {"field": "x", "type": "quantitative"},
+        "y": {"field": "y", "type": "quantitative"},
+        "text": {"field": "text", "type": "nominal"}
+    }
+}
+    ]
 }
