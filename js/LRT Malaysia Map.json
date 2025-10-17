@@ -1,6 +1,6 @@
 {
     "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
-    "width": 625,
+    "width": "container",
     "height": 450,
     "projection": {
       "type": "conicEqualArea",
