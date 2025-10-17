@@ -76,10 +76,10 @@
             "title": "Train Line",
             "scale": {
               "domain": [
-                "LRT Ampang Line",
-                "LRT Kelana Jaya Line", 
-                "Monorail Line",
-                "MRT Kajang Line",
+                "LRT Ampang",
+                "LRT Kelana Jaya", 
+                "Monorail",
+                "MRT Kajang",
                 "KTMB ETS",
                 "KTM Intercity",
                 "KTM Komuter"
