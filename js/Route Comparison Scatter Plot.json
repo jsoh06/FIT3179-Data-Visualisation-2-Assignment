@@ -114,13 +114,9 @@
                 "range": ["purple", "#7B68EE", "lightseagreen"]
             },
             "legend": {
-                "orient": "none",
-                "legendX": 10,
-                "legendY": 5,
-                "direction": "vertical",
-                "titleAnchor": "start",
-                "offset": 0,
-                "padding": 10
+                "orient": "none", 
+                "legendX": 10, 
+                "legendY": 5
             }
         },
         
