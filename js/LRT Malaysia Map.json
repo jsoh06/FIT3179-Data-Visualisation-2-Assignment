@@ -1,10 +1,10 @@
 {
     "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
-    "width": 625,
-    "height": 450,
+    "width": 700,
+    "height": 425,
     "projection": {
       "type": "conicEqualArea",
-      "center": [101.668543, 3.115596],
+      "center": [101.668543, 3.095596],
       "scale": 80000
     },
     "params": [
