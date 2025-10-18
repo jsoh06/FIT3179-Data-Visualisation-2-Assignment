@@ -11,7 +11,8 @@ p {
 h1 {
     font-family: Georgia, 'Times New Roman', Times, serif;
     font-weight: 900;
-    margin-bottom: 10px; /* Reduce space after title */
+    margin-bottom: 5px; /* Reduce space after title */
+    margin-top: 10px
 }
 
 h2 {
@@ -26,14 +27,17 @@ i {
 
 body {
     background-color: lightgray;
+    margin: 0;
+    padding: 0;
 }
 
 .page {
     width: 900px;
     background-color: white;
-    margin: auto;
-    padding: 25px;
-    padding-top: 0.1em;
+    margin: 10px auto;
+    padding: 15px;
+    padding-top: 10px;
+    padding-bottom: 10px;
 }
 
 .vis-container {
@@ -43,29 +47,31 @@ body {
 }
 
 .pure-g {
-    margin-bottom: 15px;
-    padding: 25px 0;
+    margin-bottom: 8px;
+    padding: 15px 0;
     border-bottom: 1px solid #e0e0e0;
 }
 
 /* Add this to reduce space between title and visualizations */
 .pure-g:first-of-type {
-    margin-bottom: 5px;
-    padding-bottom: 10px; /*padding for title*/
+    margin-bottom: 3px;
+    padding-bottom: 5px; /*padding for title*/
+    padding-top: 5px;
 }
 
 /* Left border accents for visual hierarchy */
 .pure-g:not(:first-child):not(:last-child) {
     border-left: 4px solid #e0e0e0;
     padding-left: 10px;
-    margin-bottom: 10px; /* Add this to reduce space between sections */
+    margin-bottom: 5px; /* Add this to reduce space between sections */
 }
 
 /* Metadata section - minimal spacing */
 .pure-g:last-child {
     margin-bottom: 0px;
-    margin-top: 10px;
+    margin-top: 5px;
     border-bottom: none;
+    padding-bottom: 5px;
 }
 
 /* Subtle background variations */
@@ -92,8 +98,8 @@ body {
 
 .metadata p {
     font-size: 11px;
-    margin-bottom: 0.3em;
-    margin-top: 0.3em;
+    margin-bottom: 0.2em;
+    margin-top: 0.2em;
     line-height: 1.2;
 }
 
