@@ -115,8 +115,8 @@
             },
             "legend": {
                 "orient": "none",
-                "legendX": 480,
-                "legendY": 150,
+                "legendX": 10,
+                "legendY": 5,
                 "direction": "vertical",
                 "titleAnchor": "start",
                 "offset": 0,
@@ -150,7 +150,7 @@
 {
     "data": {
         "values": [
-            {"x": 12, "y": 1.25, "text": "Short & Cheap"},
+            {"x": 14, "y": 1.25, "text": "Short & Cheap"},
             {"x": 82, "y": 6.0, "text": "Long & Expensive"}
         ]
     },
