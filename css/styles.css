@@ -1,9 +1,9 @@
 * {
     font-family: 'Oxygen', sans-serif;
     line-height: 1.6;
-  }
-  
-  /* Consistent color palette */
+}
+
+/* Consistent color palette */
 :root {
     --primary-purple: #8e44ad;
     --secondary-blue: #3498db; 
@@ -15,7 +15,7 @@ p {
     line-height: 1.65;
     max-width: 65ch;
     width: 95%;
-    margin-bottom: 0.8em; /* Add this to reduce paragraph spacing */
+    margin-bottom: 0.8em;
 }
 
 @import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Source+Sans+Pro:wght@300;400;600&display=swap');
@@ -24,7 +24,7 @@ h1 {
     font-family: 'Playfair Display', serif;
     font-size: 2.2em;
     font-weight: 800;
-    margin-bottom: 5px; /* Reduce space after title */
+    margin-bottom: 5px;
     margin-top: 10px;
     letter-spacing: -0.5px;
 }
@@ -37,13 +37,13 @@ h2 {
     color: #2c3e50;
     border-bottom: 2px solid #3498db;
     padding-bottom: 5px;
-    margin-top: 0px; /* Reduce space above h2 */
-    margin-bottom: 5px; /* Small space between h2 and italic */
+    margin-top: 0px;
+    margin-bottom: 5px;
 }
 
 i {
     display: block;
-    margin-bottom: 5px; /* Increase space after italic text */
+    margin-bottom: 5px;
 }
 
 body {
@@ -76,10 +76,10 @@ body {
     border-bottom: 1px solid #e0e0e0;
 }
 
-/* Add this to reduce space between title and visualizations */
+/* Title section */
 .pure-g:first-of-type {
     margin-bottom: 3px;
-    padding-bottom: 5px; /*padding for title*/
+    padding-bottom: 5px;
     padding-top: 5px;
 }
 
@@ -87,7 +87,7 @@ body {
 .pure-g:not(:first-child):not(:last-child) {
     border-left: 4px solid #e0e0e0;
     padding-left: 10px;
-    margin-bottom: 5px; /* Add this to reduce space between sections */
+    margin-bottom: 5px;
 }
 
 /* Metadata section - minimal spacing */
@@ -106,6 +106,7 @@ body {
 .pure-g.map {
     border-left-color: #2196F3;
     background-color: #f3f8ff;
+    padding: 15px 0; /* Reduced from 20px */
 }
 
 .pure-g.heatmap {
@@ -120,6 +121,23 @@ body {
     box-sizing: border-box;
 }
 
+/* Fix excessive spacing in map section */
+.pure-g.map .pure-u-1-2:first-child {
+    width: 32%;
+    padding-right: 25px;
+    align-self: flex-start; /* Align to top */
+}
+
+.pure-g.map .pure-u-1-2:last-child {
+    width: 68%;
+}
+
+/* Ensure proper vertical alignment */
+.pure-g.map {
+    display: flex;
+    align-items: flex-start; /* Align items to top */
+}
+
 .metadata p {
     font-size: 11px;
     margin-bottom: 0.2em;
@@ -127,23 +145,21 @@ body {
     line-height: 1.2;
 }
 
-/* Also target the first p element specifically */
 .metadata p:first-of-type {
     margin-top: 0px !important;
 }
 
-/* And the last p element */
 .metadata p:last-of-type {
     margin-bottom: 0px !important;
 }
 
-/* Heatmap section layout */
+/* General layout for other sections */
 .pure-g .pure-u-1-2:first-child {
     width: 32%;
     padding-right: 25px;
 }
 
-.pure-g .pure-u-1-2:last-child {
+.pure-g .pure-u-2:last-child {
     width: 68%;
 }
 
