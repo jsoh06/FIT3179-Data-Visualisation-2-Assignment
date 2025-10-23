@@ -1,13 +1,54 @@
-* {
-    font-family: 'Oxygen', sans-serif;
-    line-height: 1.6;
-  }
-  
-  /* Consistent color palette */
+/* ============================================================================
+   MALAYSIAN LRT DATA VISUALIZATION STYLESHEET
+   ============================================================================ */
+
+/* Import Google Fonts for enhanced typography hierarchy */
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Source+Sans+Pro:wght@300;400;600&display=swap');
+
+/* CSS Custom Properties for consistent color theming */
 :root {
     --primary-purple: #8e44ad;
-    --secondary-blue: #3498db; 
+    --secondary-blue: #3498db;
     --accent-teal: #1abc9c;
+    --text-dark: #2c3e50;
+    --border-light: #e0e0e0;
+    --bg-light: #fafafa;
+}
+
+/* ============================================================================
+   GLOBAL STYLES & TYPOGRAPHY
+   ============================================================================ */
+
+* {
+    font-family: 'Source Sans Pro', sans-serif;
+    line-height: 1.6;
+    box-sizing: border-box;
+}
+
+body {
+    font-weight: 400;
+    background-color: lightgray;
+    margin: 0;
+    padding: 0;
+}
+
+/* Typography hierarchy */
+h1 {
+    font-family: 'Playfair Display', serif;
+    font-size: 2.2em;
+    font-weight: 700;
+    margin: 10px 0 5px 0;
+    letter-spacing: -0.5px;
+}
+
+h2 {
+    font-weight: 600;
+    font-size: 1.5em;
+    line-height: 1.3;
+    color: var(--text-dark);
+    border-bottom: 2px solid var(--secondary-blue);
+    padding-bottom: 5px;
+    margin: 0 0 5px 0;
 }
 
 p {
@@ -15,134 +56,79 @@ p {
     line-height: 1.65;
     max-width: 65ch;
     width: 95%;
-    margin-bottom: 0.8em; /* Add this to reduce paragraph spacing */
-}
-
-@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Source+Sans+Pro:wght@300;400;600&display=swap');
-
-h1 {
-    font-family: 'Playfair Display', serif;
-    font-size: 2.2em;
-    font-weight: 700;
-    margin-bottom: 5px; /* Reduce space after title */
-    margin-top: 10px;
-    letter-spacing: -0.5px;
-}
-
-h2 {
-    font-family: 'Source Sans Pro', sans-serif;
-    font-weight: 600;
-    font-size: 1.5em;
-    line-height: 1.3;
-    color: #2c3e50;
-    border-bottom: 2px solid #3498db;
-    padding-bottom: 5px;
-    margin-top: 0px; /* Reduce space above h2 */
-    margin-bottom: 5px; /* Small space between h2 and italic */
+    margin-bottom: 0.8em;
 }
 
 i {
     display: block;
-    margin-bottom: 5px; /* Increase space after italic text */
+    margin-bottom: 5px;
 }
 
-body {
-    font-family: 'Source Sans Pro', sans-serif;
-    font-weight: 400;
-    line-height: 1.6;
-    background-color: lightgray;
-    margin: 0;
-    padding: 0;
-}
+/* ============================================================================
+   LAYOUT & GRID SYSTEM
+   ============================================================================ */
 
 .page {
     width: 900px;
     background-color: white;
     margin: 10px auto;
-    padding: 15px;
-    padding-top: 10px;
-    padding-bottom: 10px;
+    padding: 15px 15px 10px 15px;
 }
 
 .vis-container {
     width: 100%;
-    max-width: 100%;
     overflow: hidden;
 }
 
+/* Grid system */
 .pure-g {
     margin-bottom: 10px;
     padding: 20px 0;
-    border-bottom: 1px solid #e0e0e0;
+    border-bottom: 1px solid var(--border-light);
 }
 
-/* Add this to reduce space between title and visualizations */
 .pure-g:first-of-type {
     margin-bottom: 3px;
-    padding-bottom: 5px; /*padding for title*/
-    padding-top: 5px;
+    padding: 5px 0;
 }
 
-/* Left border accents for visual hierarchy */
 .pure-g:not(:first-child):not(:last-child) {
-    border-left: 4px solid #e0e0e0;
+    border-left: 4px solid var(--border-light);
     padding-left: 10px;
-    margin-bottom: 5px; /* Add this to reduce space between sections */
+    margin-bottom: 5px;
 }
 
-/* Metadata section - minimal spacing */
 .pure-g:last-child {
-    margin-bottom: 0px;
-    margin-top: 5px;
-    border-bottom: none;
+    margin: 5px 0 0 0;
     padding-bottom: 5px;
+    border-bottom: none;
 }
 
-/* Subtle background variations */
 .pure-g:nth-child(even) {
-    background-color: #fafafa;
+    background-color: var(--bg-light);
 }
 
+/* Section-specific styling */
 .pure-g.map {
     border-left-color: #2196F3;
     background-color: #f3f8ff;
 }
 
-/* Fix excessive spacing in map section */
 .pure-g.map .pure-u-1-2:first-child {
-    width: 32%;
     padding-top: 25px;
 }
+
 .pure-g.heatmap {
     border-left-color: #9C27B0;
     background-color: #fdf4ff;
 }
 
-/* Force proper grid layout */
+/* Two-column layout */
 .pure-u-1-2 {
     display: inline-block;
     vertical-align: top;
-    box-sizing: border-box;
 }
 
-.metadata p {
-    font-size: 12px;
-    margin-bottom: 0.2em;
-    margin-top: 0.2em;
-    line-height: 1.2;
-}
-
-/* Also target the first p element specifically */
-.metadata p:first-of-type {
-    margin-top: 0px !important;
-}
-
-/* And the last p element */
-.metadata p:last-of-type {
-    margin-bottom: 0px !important;
-}
-
-/* Heatmap section layout */
 .pure-g .pure-u-1-2:first-child {
     width: 32%;
     padding-right: 25px;
@@ -152,7 +138,24 @@ body {
     width: 68%;
 }
 
-/* Scale charts appropriately within their containers */
+/* ============================================================================
+   COMPONENT-SPECIFIC STYLING
+   ============================================================================ */
+
+.metadata p {
+    font-size: 12px;
+    line-height: 1.2;
+    margin: 0.2em 0;
+}
+
+.metadata p:first-of-type {
+    margin-top: 0;
+}
+
+.metadata p:last-of-type {
+    margin-bottom: 0;
+}
+
 #vis1, #vis2, #vis3, #vis4 {
     width: 100%;
     height: auto;
