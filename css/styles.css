@@ -133,15 +133,16 @@ i {
 .metadata p {
     font-size: 12px;
     line-height: 1.2;
-    margin: 0.2em 0;
+    text-align: center;
+    margin: 0.4em 0;
 }
 
 .metadata p:first-of-type {
-    margin-top: 0;
+    margin-top: 0.2em; /* Small top margin */
 }
 
 .metadata p:last-of-type {
-    margin-bottom: 0;
+    margin-bottom: 0.2em; /* Small bottom margin */
 }
 
 #vis1, #vis2, #vis3, #vis4 {
