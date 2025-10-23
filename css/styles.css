@@ -2,7 +2,7 @@
    MALAYSIAN LRT DATA VISUALIZATION STYLESHEET
    ============================================================================ */
 
-/* Import Google Fonts for enhanced typography hierarchy */
+/* Import Google Fonts Playfair Display */
 @import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Source+Sans+Pro:wght@300;400;600&display=swap');
 
 /* CSS Custom Properties for consistent color theming */
@@ -15,12 +15,8 @@
     --bg-light: #fafafa;
 }
 
-/* ============================================================================
-   GLOBAL STYLES & TYPOGRAPHY
-   ============================================================================ */
-
 * {
-    font-family: 'Source Sans Pro', sans-serif;
+    font-family: 'Oxygen', sans-serif;
     line-height: 1.6;
     box-sizing: border-box;
 }
@@ -32,7 +28,7 @@ body {
     padding: 0;
 }
 
-/* Typography hierarchy */
+/* Title */
 h1 {
     font-family: 'Playfair Display', serif;
     font-size: 2.2em;
@@ -63,10 +59,6 @@ i {
     display: block;
     margin-bottom: 5px;
 }
-
-/* ============================================================================
-   LAYOUT & GRID SYSTEM
-   ============================================================================ */
 
 .page {
     width: 900px;
@@ -137,10 +129,6 @@ i {
 .pure-g .pure-u-1-2:last-child {
     width: 68%;
 }
-
-/* ============================================================================
-   COMPONENT-SPECIFIC STYLING
-   ============================================================================ */
 
 .metadata p {
     font-size: 12px;
