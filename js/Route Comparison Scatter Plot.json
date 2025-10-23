@@ -108,7 +108,7 @@
         "color": {
             "field": "line",
             "type": "nominal",
-            "title": "Train Line",
+            "title": "Filter by Train Line",
             "scale": {
                 "domain": ["LRT Kelana Jaya", "MRT Kajang", "Multi-line"],
                 "range": ["purple", "#7B68EE", "lightseagreen"]
