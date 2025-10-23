@@ -136,7 +136,7 @@ i {
 .metadata p {
     font-size: 12px;
     line-height: 1.2;
-    text-align: center;
+    text-align: center !important;
     margin: 0.3em 0;
 }
 
