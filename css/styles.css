@@ -1,7 +1,3 @@
-/* ============================================================================
-   MALAYSIAN LRT DATA VISUALIZATION STYLESHEET
-   ============================================================================ */
-
 /* Import Google Fonts Playfair Display */
 @import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Source+Sans+Pro:wght@300;400;600&display=swap');
 
@@ -130,19 +126,26 @@ i {
     width: 68%;
 }
 
+.metadata {
+    background-color: #f8f9fa;
+    border-top: 2px solid var(--border-light);
+    padding: 15px;
+    margin-top: 15px;
+}
+
 .metadata p {
     font-size: 12px;
     line-height: 1.2;
     text-align: center;
-    margin: 0.4em 0;
+    margin: 0.3em 0;
 }
 
 .metadata p:first-of-type {
-    margin-top: 0.2em; /* Small top margin */
+    margin-top: 0;
 }
 
 .metadata p:last-of-type {
-    margin-bottom: 0.2em; /* Small bottom margin */
+    margin-bottom: 0;
 }
 
 #vis1, #vis2, #vis3, #vis4 {
